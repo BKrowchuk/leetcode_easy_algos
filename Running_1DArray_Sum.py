@@ -9,7 +9,6 @@ class Solution(object):
         for i in nums:
             total += i
             rsum.append(total)
-        print(rsum)
         return rsum
 
 a  = Solution()

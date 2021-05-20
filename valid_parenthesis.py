@@ -4,7 +4,7 @@ class Solution(object):
         :type s: str
         :rtype: bool
         """
-        if len(s) == 1:
+        if len(s) % 2:
             return False
         dic = {'(': 1, '[': 2, '{': 3, ')': 4, ']': 5, '}': 6}
         stack = []
@@ -14,7 +14,7 @@ class Solution(object):
             if curr < 4:
                 stack.append(curr)
             else:
-                if stack.pop() != curr-3:
+                if len(stack) == 0 or stack.pop() != curr-3:
                     valid = False
                     break
         if len(stack) > 0:

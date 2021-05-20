@@ -17,8 +17,10 @@ class Solution(object):
                 if stack.pop() != curr-3:
                     valid = False
                     break
+        if len(stack) > 0:
+            return False
         return valid
 
 
 a = Solution()
-print(a.isValid("()"))
+print(a.isValid("(()"))
